@@ -1,10 +1,10 @@
 /*
  * @Author: Mukti
  * @Date: 2021-11-15 18:09:04
- * @LastEditTime: 2021-11-16 10:49:23
+ * @LastEditTime: 2021-11-24 14:15:46
  * @LastEditors: Mukti
  */
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +12,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+  count = 0;
+  checkedStatus = false;
   title = 'angular-demo';
   test = "Mukti";
+
+  @ViewChild('testview')
+  testview!: ElementRef<any>;
+
   t() {
-    console.log('test');
+    console.log('test'); 
+  }
+  testLife() {
+    this.count++;
+  }
+  change(event:any) {
+    this.testview.nativeElement.checked = false;
   }
 }
