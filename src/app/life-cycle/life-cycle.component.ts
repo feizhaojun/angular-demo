@@ -1,7 +1,7 @@
 /*
  * @Author: Mukti
  * @Date: 2021-11-23 15:38:30
- * @LastEditTime: 2021-11-24 14:51:02
+ * @LastEditTime: 2021-11-25 10:24:03
  * @LastEditors: Mukti
  */
 import { Component, Input, OnInit } from '@angular/core';
@@ -15,6 +15,9 @@ export class LifeCycleComponent implements OnInit {
 
   @Input() num: any;
   // num = 0;
+  obj = {
+    a: 1,
+  };
   constructor() {
     console.log(this.num);
    }
