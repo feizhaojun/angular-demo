@@ -311,7 +311,8 @@
   />
   <span (click)="t()">Welcome {{test}}</span>
   <button (click)="testLife()">TEST</button>
-  <app-life-cycle [num]="count"></app-life-cycle>
+  <app-life-cycle [num]="count" [list]="list"></app-life-cycle>
+  <div *ngFor="let item of list">{{item}}</div>
   <input #testview type="checkbox" [checked]="checkedStatus" (click)="change($event)" />
     <div class="spacer"></div>
     <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
